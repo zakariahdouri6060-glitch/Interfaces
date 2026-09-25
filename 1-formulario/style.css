@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ce7373;
+    flex-direction: column;
+}
+
+.container {
+    border-radius: 25px;
+    display: grid;
+    justify-content: center;
+    width: 25%;
+    min-width: 300px;
+    border: 2px none black;
+    background: #bb8080;
+    padding: 20px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+    border: 6px;
+    color: rgb(0, 0, 0)
+}
+
+input[type="text"], input[type="email"], textarea {
+    background: #bb8080;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow:
+        -4px -4px 8px rgba(255, 255, 255, 0.08),
+        4px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.15s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #00000093;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+    box-shadow:
+        -2px -2px 6px rgba(255, 255, 255, 0.1),
+        2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline: none;
+    box-shadow:
+        inset 2px 2px 5px rgba(0, 0, 0, 0.5),   /* pressed-in look when active */
+        inset -2px -2px 5px rgba(255, 255, 255, 0.05);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"], input[type="email"], textarea, button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    color: white;
+    background-color: #000000;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgba(3, 3, 3, 0.267);
+}
+
+h1 {
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    background: #bb8080;
+    box-shadow:
+        -4px -4px 8px rgba(255, 255, 255, 0.08),
+        4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#datos {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border: #000000;
+    background-color: green;
+    box-shadow: -4px -4px 8px rgba(247, 246, 246, 0.5),
+                4px 4px 8px rgba(0, 0, 0, 0.5)
+}

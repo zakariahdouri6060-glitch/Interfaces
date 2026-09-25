@@ -27,7 +27,7 @@ const nombre = document.getElementById('name');
 
 const surName = document.getElementById('surname');
 
-const sexo = document.getElementById('sex');
+// const sexo = document.getElementById('sex');
 
 
 console.log(header);
@@ -42,6 +42,34 @@ console.log(nombre);
 
 console.log(surName);
 
-console.log(sexo);
+// console.log(sexo);
+
+
+formulario.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const surName = document.getElementById('surname').value;
+    const sexo = document.getElementsByName('sex').value;
+    const email = document.getElementById('email').value;
+    const niek = document.getElementById('niek').value;
+    const comment = document.getElementById('comment').value;
+
+    console.log(name);
+    console.log(surName);
+    // console.log(sexo);
+    console.log(email);
+    console.log(niek);
+    console.log(comment);
+    
+    let datos = document.getElementById('datos');
+
+    datos.innerHTML = `Hola soy ${name} ${surName},  responsable me correo es ${email}`
+
+    datos.className = 'datos-resultado'
+
+    
+
+})
 
 

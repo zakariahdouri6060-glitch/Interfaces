@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    
     <style>
 
         body {
@@ -13,6 +14,7 @@
             justify-content: center;
             align-items: center;
             background: #cecdcd;
+            flex-direction: column;
         }
         .container {
             border-radius: 25px;
@@ -98,6 +100,17 @@
             align-items: center;
             gap: 6px;
         }
+
+        #datos {
+            margin-top: 30px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            border: #000000;
+            background-color: green;
+            box-shadow: -4px -4px 8px rgba(247, 246, 246, 0.5),
+                        4px 4px 8px rgba(0, 0, 0, 0.5)
+        }
         
     </style>
 </head>
@@ -140,6 +153,9 @@
             </section>
         </main>
     </div>
+    <div id="datos">
+    </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
+
 </html>
