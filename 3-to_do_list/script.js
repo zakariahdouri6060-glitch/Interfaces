@@ -14,9 +14,19 @@ button.addEventListener('click', function(event){
     
     
     event.preventDefault();
+    const itemText = document.getElementById('task').value.trim();
+    if(itemText){
+        const newItem = document.createElement('li');
+        const newBox = document.createElement('input');
+        
+        newBox.type = 'checkbox';
 
-    const name_task = document.getElementById('task').value;
+        newItem.append(newBox, document.createTextNode(itemText))
+
+        document.getElementById('list').appendChild(newItem);
+        
+        document.getElementById('task').value = '';
+    }
     
-    let content = list.innerHTML = name_task;
 
 })
