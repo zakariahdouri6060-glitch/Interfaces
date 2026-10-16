@@ -1,0 +1,11 @@
+img {
+    margin: 5px;
+    width: 160px;
+}
+header {
+    justify-content: center;
+}
+main {
+    width: 100%;
+    min-height: 400%;
+}
