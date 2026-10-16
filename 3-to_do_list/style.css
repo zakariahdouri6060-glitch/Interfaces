@@ -6,6 +6,7 @@ body {
     display: flex;
     min-height: 50vh;
     
+    
 }
 
 #container {
@@ -34,10 +35,12 @@ body {
 #list {
     margin: 20px;
     padding: 100px;
-    border: 1px black solid;
+    border: 0px black hidden;
     border-style: hidden;
-    border-radius: 10%;
-    background-color: rgb(0, 255, 85);
+    background-image: url(img/notebook-page-3897614089.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 li {
     list-style-type: none;
