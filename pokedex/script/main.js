@@ -3,7 +3,7 @@ console.log("Catalog de pokemones")
 const pokemons = [
     {
         nombre: "Bulbasaur",
-        tipo: ["Planta", "Veneno"],
+        tipo: ["Planta", " Veneno"],
         altura: 0.7,
         peso: 6.9,
         sexo: "Ambos",
@@ -18,7 +18,7 @@ const pokemons = [
     },
     {
         nombre: "Butterfree",
-        tipo: ["Bicho", "Volador"],
+        tipo: ["Bicho", " Volador"],
         altura: 1.1,
         peso: 32.0,
         sexo: "ambos",
@@ -41,14 +41,14 @@ const pokemons = [
         imagen: "assets/rattata.png",
         region: "Alola",
         habilidad: {
-            principal: ["Fuga", "Agallas"],
+            principal: ["Fuga", " Agallas"],
             oculta: "Entusiasmo"
         },
         categoria: "Ratón"
     },
     {
         nombre: "Spearow",
-        tipo: ["Normal", "Volador"],
+        tipo: ["Normal", " Volador"],
         altura: 0.3,
         peso: 2.0,
         sexo: "ambos",
@@ -108,7 +108,7 @@ const pokemons = [
     },
     {
         nombre: "Weedle",
-        tipo: ["Bicho", "Veneno"],
+        tipo: ["Bicho", " Veneno"],
         altura: 0.3,
         peso: 3.2,
         sexo: "ambos",
@@ -146,14 +146,14 @@ const pokemons = [
         imagen: "assets/ekans.png",
         region: "Kanto",
         habilidad: {
-            principal: ["Mudar", "Intimidación"],
+            principal: ["Mudar", " Intimidación"],
             oculta: "Nerviosismo"
         },
         categoria: "Serpiente"
     },
     {
         nombre: "Jigglypuff",
-        tipo: ["Normal","Hada"],
+        tipo: ["Normal"," Hada"],
         altura: 0.5,
         peso: 5.5,
         sexo: "ambos",
@@ -161,14 +161,14 @@ const pokemons = [
         imagen: "assets/jigglypuff.png",
         region: "Kanto",
         habilidad: {
-            principal: ["Gran Encanto", "Tenacidad"],
+            principal: ["Gran Encanto", " Tenacidad"],
             oculta: "Compiescolta"
         },
         categoria: "Globo"
     },
     {
         nombre: "Zubat",
-        tipo: ["Veneno", "Volador"],
+        tipo: ["Veneno", " Volador"],
         altura: 0.8,
         peso: 7.5,
         sexo: "ambos",
@@ -191,7 +191,7 @@ const pokemons = [
         imagen: "assets/psyduck.png",
         region: "Kanto",
         habilidad: {
-            principal: ["Humedad", "Aclimatación"],
+            principal: ["Humedad", " Aclimatación"],
             oculta: "Nado Rápido"
         },
         categoria: "Pato"
@@ -206,7 +206,7 @@ const pokemons = [
         imagen: "assets/geodude.png",
         region: "Kanto",
         habilidad: {
-            principal: ["Cabeza Roca", "Robustez"],
+            principal: ["Cabeza Roca", " Robustez"],
             oculta: "Velo Arena"
         },
         categoria: "Roca"
@@ -221,7 +221,7 @@ const pokemons = [
         imagen: "assets/machop.png",
         region: "Kanto",
         habilidad: {
-            principal: ["Agallas", "Indefenso1"],
+            principal: ["Agallas", " Indefenso1"],
             oculta: "Impasible"
         },
         categoria: "Superpoder"
@@ -233,23 +233,67 @@ const lista = document.querySelector("#list");
 const detalles = document.querySelector("#list_content");
 
 pokemons.forEach(pokemon => {
+    
     const parafo = document.createElement("p");
-    const photos = document.createElement("img");
 
-    parafo.innerHTML = pokemon.nombre;
-    photos.src = pokemon.imagen;
+    parafo.innerText = pokemon.nombre;
 
     lista.appendChild(parafo);
-    lista.appendChild(photos);
 
-    lista.addEventListener('click', function() {
+    parafo.addEventListener('click', function() {
+        detalles.innerHTML = '';
         const photo = document.createElement("img");
-        const parafo = document.createElement("p");
+        const nombre = document.createElement("p");
+        const tipo = document.createElement("p");
+        const altura = document.createElement("p");
+        const peso = document.createElement("p");
+        const sexo = document.createElement("p");
+        const descripcion = document.createElement("p");
+        const region = document.createElement("p");
+        const habilidadA = document.createElement("p");
+        const habilidadB = document.createElement("p");
+        const categoria = document.createElement("p");
+
 
         photo.src = pokemon.imagen;
-        parafo.innerHTML = pokemon.nombre;
-        parafo.innerHTML = 
+        nombre.innerHTML = "<b>Nombre:</b> " + pokemon.nombre;
+        tipo.innerHTML = "<b>Tipo:</b> " + pokemon.tipo;
+        altura.innerHTML = "<b>Altura:</b> " + pokemon.altura;
+        peso.innerHTML = "<b>Peso:</b> " + pokemon.peso;
+        sexo.innerHTML = "<b>Sexo:</b> " + pokemon.sexo;
+        descripcion.innerHTML = "<b>Descripcion:</b> " + pokemon.descripcion;
+        region.innerHTML = "<b>Region:</b> " + pokemon.region;
+        habilidadA.innerHTML = "<p><b>Habilidades:</b><p> <b>->Principal:</b> " + pokemon.habilidad.principal;
+        habilidadB.innerHTML = "<b>->Oculta:</b> " + pokemon.habilidad.oculta;
+        categoria.innerHTML = "<b>categoria:</b> " + pokemon.categoria;
+
         detalles.appendChild(photo);
-        detalles.appendChild(parafo);
+        detalles.appendChild(nombre);
+        detalles.appendChild(tipo);
+        detalles.appendChild(altura);
+        detalles.appendChild(peso);
+        detalles.appendChild(sexo);
+        detalles.appendChild(descripcion);
+        detalles.appendChild(region);
+        detalles.appendChild(habilidadA);
+        detalles.appendChild(habilidadB)
+        detalles.appendChild(categoria);
+
+
+
+        /*Object.keys(pokemon).forEach(key => {
+            if (key === 'imagen') return;
+            
+            if (typeof value === 'object' && ) {
+                
+            }
+            const p = document.createElement('p');
+            const pa = document.createElement('p');
+
+            p.innerText = pokemon[key];
+            
+
+            detalles.appendChild(p);
+        })*/
     })
 });
