@@ -153,7 +153,78 @@ const pokemons = [
     },
     {
         nombre: "Jigglypuff",
-        tipo: []
+        tipo: ["Normal","Hada"],
+        altura: 0.5,
+        peso: 5.5,
+        sexo: "ambos",
+        descripcion: "Canta una melodía que hace dormir a quien la escucha. Si el rival se duerme, Jigglypuff se enfada y le dibuja la cara con un rotulador.",
+        imagen: "assets/jigglypuff.png",
+        region: "Kanto",
+        habilidad: {
+            principal: ["Gran Encanto", "Tenacidad"],
+            oculta: "Compiescolta"
+        },
+        categoria: "Globo"
+    },
+    {
+        nombre: "Zubat",
+        tipo: ["Veneno", "Volador"],
+        altura: 0.8,
+        peso: 7.5,
+        sexo: "ambos",
+        descripcion: "No tiene ojos. Se mueve en la oscuridad con ondas ultrasónicas que salen de su boca. Vive en cuevas y sale de noche.",
+        imagen: "assets/zubat.png",
+        region: "Kanto",
+        habilidad: {
+            principal: "Fuerza Mental",
+            oculta: "Allanamiento"
+        },
+        categoria: "Murciélago"
+    },
+    {
+        nombre: "Psyduck",
+        tipo: "Agua",
+        altura: 0.8,
+        peso: 19.6,
+        sexo: "ambos",
+        descripcion: "Sufre dolores de cabeza casi siempre. Cuando el dolor es muy fuerte, usa poderes psíquicos sin darse cuenta.",
+        imagen: "assets/psyduck.png",
+        region: "Kanto",
+        habilidad: {
+            principal: ["Humedad", "Aclimatación"],
+            oculta: "Nado Rápido"
+        },
+        categoria: "Pato"
+    },
+    {
+        nombre: "Geodude",
+        tipo: ["Roca", "Tierra"],
+        altura: 0.4,
+        peso: 20.0,
+        sexo: "ambos",
+        descripcion: "Parece una piedra en el suelo, y por eso mucha gente lo pisa sin querer. Se enfada y ataca si alguien lo molesta.",
+        imagen: "assets/geodude.png",
+        region: "Kanto",
+        habilidad: {
+            principal: ["Cabeza Roca", "Robustez"],
+            oculta: "Velo Arena"
+        },
+        categoria: "Roca"
+    },
+    {
+        nombre: "Machop",
+        tipo: "Lucha",
+        altura: 0.8,
+        peso: 19.5,
+        sexo: "ambos",
+        descripcion: "Es muy fuerte aunque es pequeño. Entrena todos los días y puede levantar a cien personas sin cansarse.",
+        imagen: "assets/machop.png",
+        region: "Kanto",
+        habilidad: {
+            principal: ["Agallas", "Indefenso1"],
+            oculta: "Impasible"
+        },
+        categoria: "Superpoder"
     }
     
 ] 
