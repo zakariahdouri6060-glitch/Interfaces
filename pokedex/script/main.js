@@ -227,4 +227,29 @@ const pokemons = [
         categoria: "Superpoder"
     }
     
-] 
+]
+
+const lista = document.querySelector("#list");
+const detalles = document.querySelector("#list_content");
+
+pokemons.forEach(pokemon => {
+    const parafo = document.createElement("p");
+    const photos = document.createElement("img");
+
+    parafo.innerHTML = pokemon.nombre;
+    photos.src = pokemon.imagen;
+
+    lista.appendChild(parafo);
+    lista.appendChild(photos);
+
+    lista.addEventListener('click', function() {
+        const photo = document.createElement("img");
+        const parafo = document.createElement("p");
+
+        photo.src = pokemon.imagen;
+        parafo.innerHTML = pokemon.nombre;
+        parafo.innerHTML = 
+        detalles.appendChild(photo);
+        detalles.appendChild(parafo);
+    })
+});
