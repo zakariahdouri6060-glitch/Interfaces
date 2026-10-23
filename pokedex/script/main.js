@@ -238,7 +238,6 @@ pokemons.forEach(pokemon => {
 
     //añadir el style a elementos parafo
     parafo.style.cssText = "cursor: pointer; transition: all 0.3 ease";
-z
     
     parafo.innerText = pokemon.nombre;
 
