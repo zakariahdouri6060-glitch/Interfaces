@@ -230,17 +230,25 @@ const pokemons = [
 ]
 
 const lista = document.querySelector("#list");
-const detalles = document.querySelector("#list_content");
+
 
 pokemons.forEach(pokemon => {
     
     const parafo = document.createElement("p");
 
+    //añadir el style a elementos parafo
+    parafo.style.cssText = "cursor: pointer; transition: all 0.3 ease";
+z
+    
     parafo.innerText = pokemon.nombre;
 
     lista.appendChild(parafo);
 
     parafo.addEventListener('click', function() {
+        const detalles = document.querySelector("#list_content");
+
+        detalles.style.backgroundColor = "#ffb2b2";
+
         detalles.innerHTML = '';
         const photo = document.createElement("img");
         const nombre = document.createElement("p");
