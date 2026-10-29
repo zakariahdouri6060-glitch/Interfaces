@@ -33,7 +33,7 @@ const pokemons = [
     },
     {
         nombre: "Rattata",
-        tipo: "Normal",
+        tipo: ["Normal"],
         altura: 0.3,
         peso: 3.5,
         sexo: "ambos",
@@ -63,7 +63,7 @@ const pokemons = [
     },
     {
         nombre: "Charmander",
-        tipo: "Fuego",
+        tipo: ["Fuego"],
         altura: 0.6,
         peso: 8.5,
         sexo: "ambos",
@@ -78,7 +78,7 @@ const pokemons = [
     },
     {
         nombre: "Squirtle",
-        tipo: "Agua",
+        tipo: ["Agua"],
         altura: 0.5,
         peso: 9.0,
         sexo: "ambos",
@@ -93,7 +93,7 @@ const pokemons = [
     },
     {
         nombre: "Caterpie",
-        tipo: "Bicho",
+        tipo: ["Bicho"],
         altura: 0.3,
         peso: 2.9,
         sexo: "ambos",
@@ -123,7 +123,7 @@ const pokemons = [
     },
     {
         nombre: "Pikachu",
-        tipo: "Eléctrico",
+        tipo: ["Eléctrico"],
         altura: 0.4,
         peso: 6.0,
         sexo: "ambos",
@@ -138,7 +138,7 @@ const pokemons = [
     },
     {
         nombre: "Ekans",
-        tipo: "Veneno",
+        tipo: ["Veneno"],
         altura: 2.0,
         peso: 6.9,
         sexo: "ambos",
@@ -183,7 +183,7 @@ const pokemons = [
     },
     {
         nombre: "Psyduck",
-        tipo: "Agua",
+        tipo: ["Agua"],
         altura: 0.8,
         peso: 19.6,
         sexo: "ambos",
@@ -213,7 +213,7 @@ const pokemons = [
     },
     {
         nombre: "Machop",
-        tipo: "Lucha",
+        tipo: ["Lucha"],
         altura: 0.8,
         peso: 19.5,
         sexo: "ambos",
@@ -230,6 +230,13 @@ const pokemons = [
 ]
 
 const lista = document.querySelector("#list");
+
+const filtro = document.querySelector("#filtro_tipo");
+
+
+pokemons.forEach(tipo => {
+    tipo.tipo
+})
 
 
 pokemons.forEach(pokemon => {
@@ -303,4 +310,22 @@ pokemons.forEach(pokemon => {
             detalles.appendChild(p);
         })*/
     })
+    
+    
+    
+    for (let index = 0; index < pokemons.length; index++) {
+        const tipo_filtro = document.createElement('p');
+        tipo_filtro.style.cssText = "cursor: pointer; transition: all 0.3s ease";
+
+        const arrayTipo = pokemon.tipo[index];
+        const elemento = [...new Set(arrayTipo)];
+
+        console.log(elemento.join(''));
+        
+        tipo_filtro.innerText = elemento.join("");
+        filtro.appendChild(tipo_filtro);
+        
+    }
+    
 });
+
